@@ -5,7 +5,7 @@ import (
 
 	"github.com/tidwall/gjson"
 
-	"github.com/shenghui0779/gochat/wx"
+	"github.com/accaolei/gochat/wx"
 )
 
 // MenuButtonType 菜单按钮类型

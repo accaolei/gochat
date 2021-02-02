@@ -4,8 +4,8 @@ import (
 	"encoding/xml"
 	"time"
 
-	"github.com/shenghui0779/gochat/event"
-	"github.com/shenghui0779/gochat/wx"
+	"github.com/accaolei/gochat/event"
+	"github.com/accaolei/gochat/wx"
 )
 
 // ReplyHeader 公众号消息回复公共头

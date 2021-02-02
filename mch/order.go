@@ -3,7 +3,7 @@ package mch
 import (
 	"strconv"
 
-	"github.com/shenghui0779/gochat/wx"
+	"github.com/accaolei/gochat/wx"
 )
 
 // OrderData 统一下单数据

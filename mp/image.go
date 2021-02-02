@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"net/url"
 
-	"github.com/shenghui0779/gochat/wx"
+	"github.com/accaolei/gochat/wx"
 	"github.com/tidwall/gjson"
 )
 

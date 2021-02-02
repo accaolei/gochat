@@ -5,7 +5,7 @@ import (
 
 	"github.com/tidwall/gjson"
 
-	"github.com/shenghui0779/gochat/wx"
+	"github.com/accaolei/gochat/wx"
 )
 
 // MaxSubscriberListCount 关注列表的最大数目

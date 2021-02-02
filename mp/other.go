@@ -5,7 +5,7 @@ import (
 
 	"github.com/tidwall/gjson"
 
-	"github.com/shenghui0779/gochat/wx"
+	"github.com/accaolei/gochat/wx"
 )
 
 // InvokeData 服务调用数据

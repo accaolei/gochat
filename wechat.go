@@ -1,9 +1,9 @@
 package gochat
 
 import (
-	"github.com/shenghui0779/gochat/mch"
-	"github.com/shenghui0779/gochat/mp"
-	"github.com/shenghui0779/gochat/oa"
+	"github.com/accaolei/gochat/mch"
+	"github.com/accaolei/gochat/mp"
+	"github.com/accaolei/gochat/oa"
 )
 
 // NewMch 微信商户

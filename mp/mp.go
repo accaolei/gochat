@@ -9,8 +9,8 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/shenghui0779/gochat/event"
-	"github.com/shenghui0779/gochat/wx"
+	"github.com/accaolei/gochat/event"
+	"github.com/accaolei/gochat/wx"
 	"github.com/tidwall/gjson"
 )
 

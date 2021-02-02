@@ -3,7 +3,7 @@ package mp
 import (
 	"encoding/json"
 
-	"github.com/shenghui0779/gochat/wx"
+	"github.com/accaolei/gochat/wx"
 )
 
 // LogisticsAddOrderReq 物流助手生成运单请求结构体

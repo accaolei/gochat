@@ -5,7 +5,7 @@ import (
 
 	"github.com/tidwall/gjson"
 
-	"github.com/shenghui0779/gochat/wx"
+	"github.com/accaolei/gochat/wx"
 )
 
 // ImageSize 图片尺寸

@@ -4,7 +4,7 @@ import (
 	"encoding/base64"
 	"strconv"
 
-	"github.com/shenghui0779/gochat/wx"
+	"github.com/accaolei/gochat/wx"
 )
 
 // TransferBalanceData 付款到零钱数据

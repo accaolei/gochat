@@ -3,7 +3,7 @@ package mch
 import (
 	"testing"
 
-	"github.com/shenghui0779/gochat/wx"
+	"github.com/accaolei/gochat/wx"
 	"github.com/stretchr/testify/assert"
 )
 

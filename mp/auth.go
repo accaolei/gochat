@@ -3,7 +3,7 @@ package mp
 import (
 	"github.com/tidwall/gjson"
 
-	"github.com/shenghui0779/gochat/wx"
+	"github.com/accaolei/gochat/wx"
 )
 
 // AuthSession 小程序授权Session

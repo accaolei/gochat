@@ -3,7 +3,7 @@ package mp
 import (
 	"encoding/json"
 
-	"github.com/shenghui0779/gochat/wx"
+	"github.com/accaolei/gochat/wx"
 )
 
 // MessageBody 消息内容体
