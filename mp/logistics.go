@@ -55,6 +55,19 @@ type DeliverOrderService struct {
 
 // LogisticsAddOrderResult 物流助手生成运单返回结构体
 type LogisticsAddOrderResult struct {
+	OrderID            string            `json:"order_id"`
+	WaybillID          string            `json:"waybill_id"`
+	WaybillData        []WaybillDataItem `json:"waybill_data"`
+	Errcode            int               `json:"errcode"`
+	Errmsg             string            `json:"errmsg"`
+	DeliveryResultCode int               `json:"delivery_result_code"`
+	DeliveryResultmsg  string            `json:"delivery_resultmsg"`
+}
+
+// WaybillDataItem waybill data
+type WaybillDataItem struct {
+	Key   string `json:"key"`
+	Value string `json:"value"`
 }
 
 // LogisticsAddOrder 物流助手生成运单
