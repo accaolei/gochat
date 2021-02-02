@@ -8,22 +8,24 @@ import (
 
 // LogisticsAddOrderReq 物流助手生成运单请求结构体
 type LogisticsAddOrderReq struct {
-	AddSource    int8               `json:"add_source"`    //订单来源，0为小程序订单，2为App或者H5订单，填2则不发物流服务通知
-	OrderID      string             `json:"order_id"`      //订单号id，需要全局唯一,不超过512字节
-	Openid       string             `json:"openid"`        //用户openid
-	DeliveryID   string             `json:"delivery_id"`   //快递公司ID
-	BizID        string             `json:"biz_id"`        //快递客户编码或者现付编码
-	CustomRemark string             `json:"custom_remark"` //备注
-	Sender       DeliverOrderSender `json:"sender"`        //发件人信息
-	Receiver     DeliverOrderSender `json:"receiver"`      //收件人信息
-	Shop         DeliverOrderShop   `json:"shop"`          //商品信息，会展示到物流服务通知和电子面单中
-	Insured      struct {
-		UseInsured   int `json:"use_insured"`   //是否报价，0不保，1保
-		InsuredValue int `json:"insured_value"` //保价金额，单位是分
-	} `json:"insured"` //是否报价
-	Service struct {
-	} `json:"service"` //服务类型
-	ExpectTime int `json:"expect_time"` //Unix时间戳，单位秒，顺丰必传。0表示已事先约定好取件时间
+	AddSource    int8                `json:"add_source"`    //订单来源，0为小程序订单，2为App或者H5订单，填2则不发物流服务通知
+	OrderID      string              `json:"order_id"`      //订单号id，需要全局唯一,不超过512字节
+	Openid       string              `json:"openid"`        //用户openid
+	DeliveryID   string              `json:"delivery_id"`   //快递公司ID
+	BizID        string              `json:"biz_id"`        //快递客户编码或者现付编码
+	CustomRemark string              `json:"custom_remark"` //备注
+	Sender       DeliverOrderSender  `json:"sender"`        //发件人信息
+	Receiver     DeliverOrderSender  `json:"receiver"`      //收件人信息
+	Shop         DeliverOrderShop    `json:"shop"`          //商品信息，会展示到物流服务通知和电子面单中
+	Insured      DeliverOrderInsured `json:"insured"`       //是否报价
+	Service      DeliverOrderService `json:"service"`       //服务类型
+	ExpectTime   int                 `json:"expect_time"`   //Unix时间戳，单位秒，顺丰必传。0表示已事先约定好取件时间
+}
+
+// DeliverOrderInsured insured
+type DeliverOrderInsured struct {
+	UseInsured   int `json:"use_insured"`   //是否报价，0不保，1保
+	InsuredValue int `json:"insured_value"` //保价金额，单位是分
 }
 
 // DeliverOrderSender 发件人数据结构
