@@ -190,3 +190,18 @@ func (mp *MP) DecryptEventMessage(encrypt string) (wx.WXML, error) {
 
 	return wx.ParseXML2Map(b)
 }
+
+// DecryptEventMessageForJSON 事件消息解密JSON格式
+func (mp *MP) DecryptEventMessageForJSON(encrypt string) (map[string]string, error) {
+	b, err := event.Decrypt(mp.appid, mp.encodingAESKey, encrypt)
+
+	if err != nil {
+		return nil, err
+	}
+	m := make(map[string]string)
+	err = json.Unmarshal(b, &m)
+	if err != nil {
+		return nil, err
+	}
+	return m, err
+}
