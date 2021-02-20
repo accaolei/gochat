@@ -192,13 +192,13 @@ func (mp *MP) DecryptEventMessage(encrypt string) (wx.WXML, error) {
 }
 
 // DecryptEventMessageForJSON 事件消息解密JSON格式
-func (mp *MP) DecryptEventMessageForJSON(encrypt string) (map[string]string, error) {
+func (mp *MP) DecryptEventMessageForJSON(encrypt string) (map[string]interface{}, error) {
 	b, err := event.Decrypt(mp.appid, mp.encodingAESKey, encrypt)
 
 	if err != nil {
 		return nil, err
 	}
-	m := make(map[string]string)
+	m := make(map[string]interface{})
 	err = json.Unmarshal(b, &m)
 	if err != nil {
 		return nil, err
