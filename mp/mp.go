@@ -160,7 +160,7 @@ func (mp *MP) Do(ctx context.Context, accessToken string, action wx.Action, opti
 	r := gjson.ParseBytes(resp)
 
 	if code := r.Get("errcode").Int(); code != 0 {
-		return fmt.Errorf("%d|%s|%s", code, r.Get("errmsg").String(), r.Get("delivery_resultcode").String())
+		return fmt.Errorf("%d|%s|%s", code, r.Get("errmsg").String(), r.Get("delivery_resultmsg").String())
 	}
 
 	if action.Decode() == nil {
