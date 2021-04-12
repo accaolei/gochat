@@ -145,7 +145,7 @@ func (h *HTTPClient) Post(ctx context.Context, url string, body []byte, options 
 	options = append(options, WithHTTPHeader("Content-Type", "application/json; charset=utf-8"))
 
 	req, err := http.NewRequest("POST", url, bytes.NewReader(body))
-
+	req.Header.Add("Accept-Charset", "utf-8")
 	if err != nil {
 		return nil, err
 	}
