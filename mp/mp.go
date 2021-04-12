@@ -160,6 +160,7 @@ func (mp *MP) Do(ctx context.Context, accessToken string, action wx.Action, opti
 	r := gjson.ParseBytes(resp)
 
 	if code := r.Get("errcode").Int(); code != 0 {
+		fmt.Println(r)
 		return fmt.Errorf("%d|%s|%s", code, r.Get("errmsg").String(), r.Get("delivery_resultmsg").String())
 	}
 
